@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+ 
+}::after 
+
+h1,
+h4,
+p {
+  margin: 0px;
+}
+
+body {
+  
+}
+.container {
+ 
+}
+
+/* El contenedor flex para la primera fila de contenido */
+
+
+header {
+ display: flex;
+ justify-content: center;
+}
+
+/* El menú */
+nav {
+  display: flex;
+ flex-direction: column;
+ justify-items: flex-start;
+ 
+
+}
+
+nav div {
+  display: flex;
+  margin-bottom: 10px;
+
+  
+  
+}
+
+/* El elemento principal */
+main {
+ display: flex;
+ flex-direction: column;
+ border: 1px solid;
+ width: 50%;
+ padding: 20px;
+ justify-items: center;
+}
+
+main img {
+  
+}
+.content_wrapper {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid;
+  padding: 20px;
+  justify-content: space-between;
+  
+}
+
+.content_wrapper article:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  width: 30%;
+  padding: 20px;
+  justify-self: flex-end;
+}
+
+/* Artículo. Irudi txikiak */
+article {
+  display: flex;
+ flex-direction: row;
+ border: 1px solid;
+ width: 60%;
+ padding: 20px;
+
+}
+
+.articles {
+  border-bottom: 1px solid;
+}
+
+article img {
+  
+}
+
+
+/* Pie de la página */
+footer {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+}
+
+footer img {
+  
+}
