@@ -1,0 +1,36 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+
+body{
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: fit-content;
+    align-content: space-around;
+}
+header {
+    text-align: center;
+    
+}
+.content_wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 1200px;
+}
+.articles{
+    display: flex;
+    flex-direction: row;
+    height: 1200px;
+}
