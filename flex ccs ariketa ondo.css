@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Ajusta el ancho del contenedor principal */
+  }
+  
+  header {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+  }
+  
+  .content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    border-top: 1px solid black;
+   
+  }
+  
+  nav {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  nav div {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  .content_wrapper article:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 65%; /* El primer artículo ocupará el 65% del espacio disponible */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+  }
+  
+  article img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Controla la altura máxima de la imagen */
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  article h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .articles {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .articles article {
+    flex-grow: 1;
+    flex-basis: 32%; /* Ajusta los artículos secundarios para que ocupen el 32% cada uno */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    flex-basis: 65%; /* Ajusta el tamaño del main para ocupar dos tercios */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+  }
+  
+  main img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Controla la altura máxima de la imagen del main */
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  main p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  
+  footer div {
+    display: flex;
+    gap: 10px;
+  }
+  
+  footer img {
+    width: 30px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
