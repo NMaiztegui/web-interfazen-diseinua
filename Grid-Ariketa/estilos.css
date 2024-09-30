@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h4,
+p {
+  margin: 0px;
+}
+
+body {
+  background-color: white;
+  display: grid;
+
+}
+/* Este es el contenedor General donde fijo la estructura de la rejilla o Grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:  repeat(6, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 0px;
+
+}
+
+/* Cabecera de la página */
+header {
+  background-color: aqua;
+}
+
+/* Menú lateral */
+nav {
+  background-color: brown;
+}
+
+nav div {
+  
+}
+
+/* Imagen grande */
+main {
+  background-color: blue;
+}
+
+main img {
+  
+}
+
+/* Resto de imágenes. Colocadas por grid-auto-flow que por defecto es row */
+article {
+  
+}
+
+article img {
+  
+}
+
+
+}
+
+/* Pie de la página */
+footer {
+ 
+}
+
+footer img {
+  
+}
