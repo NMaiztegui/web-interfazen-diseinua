@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,28 +11,35 @@ p {
 }
 
 body {
-  background-color: white;
-  display: grid;
-
+  
+  font-family: 'Arial', sans-serif;
 }
 /* Este es el contenedor General donde fijo la estructura de la rejilla o Grid */
 .container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows:  repeat(6, 1fr);
-  grid-column-gap: 1px;
-  grid-row-gap: 0px;
+  
+  grid-template-columns:10%  30% 30% 30%; /* Menú a la izquierda y contenido a la derecha */
+  grid-template-rows:   10% 40% 40% 10%;
+ 
+  max-height: 900px;
+  max-width: 1250px;
 
 }
 
 /* Cabecera de la página */
 header {
-  background-color: aqua;
+  grid-column: 1/6;
+
+  background-color: #f4f4f4;
+  text-align: center;
+  align-content: center;
+  max-width: 1250px;
 }
 
 /* Menú lateral */
 nav {
   background-color: brown;
+  grid-row: 2/5;
 }
 
 nav div {
@@ -39,10 +48,19 @@ nav div {
 
 /* Imagen grande */
 main {
-  background-color: blue;
+  grid-column: 2/4;
+  background-color: #ffffff;
+ 
+  border: 1px solid black;
+  border-radius: 10px;
+  align-content: center;
+  text-align: center;
+  margin: 30px;
 }
 
 main img {
+  width: 70%;
+  height: 40%;
   
 }
 
