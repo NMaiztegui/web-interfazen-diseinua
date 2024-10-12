@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+ 
+}::after 
+
+h1,
+h4,
+p {
+  margin: 0px;
+}
+
+body {
+  background-color: white; /*kolorea jarrita*/
+}
+.container {
+  color: #666666; /*gris ilun kolorea*/
+  font-family: "Lobster", cursive; /* "Lobster" ez badago eskuragarri erabiltzailearen sisteman, "cursive"  alternatib erabiliko da.*/
+  font-weight: bolder; /*letra negrita eran azalduko da*/
+  margin: 20px auto; /*20 pixeletako margina jarriko da*/
+  width: 90%; /*bere kontenedorearen %90 okupatuko du*/
+}
+
+/* Lehenengo FLEX kontenedorea lehen ilararako */
+.content_wrapper {
+  display: flex; /*flex boxa erabiliko da*/
+  flex-wrap: wrap;/*los elementos secundarios se envolveran automaticamente a la siguiente fila si no caben en el espacio horizontal disponible*/
+  margin-bottom: 1em;/*kontenedorearen behe aldean zenbateko hutsunea lagatzen duen*/
+  justify-content: space-between; /*los elementos secundarios se distribuiran uniformemente a lo largo del eje principal (horizontal) del contenedor, con espacio adicional entre ellos y en los extremos del contenedor*/
+}
+
+header {
+  border-bottom: 1px solid #666666; /*azpian barra gris bat jartzen du*/
+  margin-bottom: 1em; /*beheko aldean espazio bat lagatzen du*/
+  padding: 1em; /*elementuaren barnean 1em-ko zabaleraz betetzen du*/
+  text-align: center; /*textua non alineatzen den*/
+  width: 100%; 
+}
+
+/* Menua */
+nav {
+  padding: 1em;/*elementuaren barnean 1em-ko zabaleraz betetzen du*/
+  width: 10%; /*kontenedorearen 10% betetzen du*/
+}
+
+nav div {
+  margin-bottom: 20px; /*beheko aldeko margina 20 pixeletakoa izango da*/
+}
+
+/* El elemento principal */
+main {
+  border: 1px solid #aaaaaa;/*ertzaren tamaina eta kolorea*/
+  border-radius: 1em; /*borobildutako ertzak*/
+  height: 400px; /*400 pixeletako altuera*/
+  padding: 1em; /*main barruan 1em beteko du*/
+  text-align: center; /*textua non zentratuta dagoen*/
+  width: 54%;/*zenbat okupatuko duen zabaleraz*/
+}
+
+main img {
+  border-radius: 1em;/*borobildutako ertzak*/
+  height: 70%; /*zenbat okupatuko duen altueraz*/
+  width: 80%;/*zenbat okupatuko duen zabaleraz*/
+}
+
+.content_wrapper article:nth-of-type(1) {/*artikulo klaseko lehen elementua hartzen du*/
+  height: 400px;/*zenbat okupatuko duen altueraz*/
+}
+
+/* Articulo. Irudi txikiak */
+article {
+  border: 1px solid #aaaaaa; /*bordearen kolorea eta zabalera*/
+  border-radius: 1em;/*borobildutako ertzak*/
+  height: 300px;/*300 pixel hartuko ditu altueran*/
+  padding: 1em; /*article barruan 1emko errellenoa edukiko du*/
+  text-align: center;/*textua non zentratuta dagoen*/
+  width: 32%;/*zenbat okupatuko duen zabaleraz*/
+}
+
+.articles {
+  display: flex; /*articles flexbox bidez erakutsiko da*/
+  justify-content: space-between; /*horizontalki nola banatuko den adieraziko du. bai alboetan zein beraien artean espazioa emango du*/
+  margin-left: 10%;/*El margen izquierdo es del 10% del ancho del elemento padre*/
+}
+
+article img {
+  border-radius: 1em;/*borobildutako ertzak*/
+  height: 60%;/*zenbat okupatuko duen altueraz*/
+  width: 100%;/*zenbat okupatuko duen zabaleraz*/
+}
+
+
+/* Oina Footerra */
+footer {
+
+  align-items:center; /*non zentratuta dagoen*/
+  border-top: 1px solid #666666; /*bordearen kolorea eta zabalera*/
+  display: flex; /*flexbox bidez erakutsiko da*/
+  justify-content: space-between;/*horizontalki nola banatuko den adieraziko du. bai alboetan zein beraien artean espazioa emango du*/
+  margin-top: 1em; /*goiko margina*/
+  padding: 2em;/* barruan 2emko errellenoa edukiko du*/
+}
+
+footer img {
+  width: 20%;/*zenbat okupatuko duen zabaleraz*/
+}
