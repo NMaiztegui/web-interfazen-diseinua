@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+}
+.container {
+    flex-direction: column;
+}
+/*flex-direction
+
+Define la dirección en la que se organizan los elementos.
+Valores:
+row: Coloca los elementos en fila, de izquierda a derecha.
+row-reverse: Coloca los elementos en fila, de derecha a izquierda.
+column: Coloca los elementos en columna, de arriba a abajo.
+column-reverse: Coloca los elementos en columna, de abajo hacia arriba.*/
+
+.container {
+    justify-content: center;
+}
+
+/*justify-content
+
+Alinea los elementos a lo largo del eje principal (horizontal o vertical).
+Valores:
+flex-start: Los elementos se alinean al principio.
+flex-end: Los elementos se alinean al final.
+center: Los elementos se centran.
+space-between: Espacio igual entre elementos.
+space-around: Espacio igual alrededor de cada elemento.
+space-evenly: Espacio uniforme entre, antes y después de cada elemento.*/
+
+.container {
+    align-items: stretch;
+}
+/*align-items
+
+Alinea los elementos a lo largo del eje perpendicular (por ejemplo, vertical si el eje principal es horizontal).
+Valores:
+flex-start: Alinea los elementos al inicio.
+flex-end: Alinea los elementos al final.
+center: Centra los elementos.
+baseline: Alinea los elementos a la línea base del texto.
+stretch: Estira los elementos para llenar el contenedor.*/
+
+.container {
+    flex-wrap: wrap;
+}
+
+/*flex-wrap
+
+Controla si los elementos se ajustan a nuevas líneas.
+Valores:
+nowrap: Todos los elementos se colocan en una sola línea.
+wrap: Los elementos se ajustan en nuevas líneas si es necesario.
+wrap-reverse: Igual que wrap, pero las nuevas líneas se colocan antes de las anteriores.*/
+
+.item {
+    flex: 1; /* Los elementos crecen uniformemente para llenar el espacio disponible */
+}
+
+/*flex (propiedad abreviada en los elementos hijos)
+
+Combina flex-grow, flex-shrink, y flex-basis.
+Valores:
+flex-grow: Define cuánto puede crecer un elemento si hay espacio extra.
+flex-shrink: Define cuánto puede encogerse un elemento si hay menos espacio.
+flex-basis: Tamaño inicial del elemento antes de aplicar crecimiento o reducción.
+*/
