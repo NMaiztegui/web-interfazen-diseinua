@@ -3,97 +3,79 @@
  
 }::after 
 
-h1,
-h4,
-p {
-  margin: 0px;
-}
-
 body {
-  background-color: white; 
+  background-color: white; /*kolorea jarrita*/
 }
-.container {
-  color: black; 
-  font-family: "Lobster", cursive;
+.container{
+  color:rgb(55, 55, 55);
+  font-family: "Lobster",cursive;
   font-weight: bolder;
-  margin: 20px auto; 
-  width: 90%; 
+  margin: 20px auto;
+  width: 90%;
 }
-
-/* Lehenengo FLEX kontenedorea lehen ilararako */
-.content_wrapper {
-  display: flex; 
-
+header{
+  text-align: center;
+  border-bottom: 1px solid #666666; 
+  margin-bottom: 10px;
+  width: 100%;
+}
+.content_wrapper{
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 1em;
-  
-  justify-content: space-between; 
-}
+  margin-bottom: 10px;
 
-header {
-  border-bottom: 1px solid black; 
-  margin-bottom: 1em; 
-  padding: 1em; 
-  text-align: center; 
-  
-  width: 100%; 
 }
-
-/* Menua */
-nav {
-  padding: 1em;
-  width: 10%; 
+main{
+  height:400px ;
+  width: 60%;
+  text-align: center;
+  border: solid black 1px;
+  padding: 5px;
+  border-radius: 5px;
 }
-
-nav div {
-  margin-bottom: 20px; 
-}
-
-/* El elemento principal */
-main {
-  border: 1px solid #aaaaaa;
-  border-radius: 1em; 
-  
-  height: 400px; 
-  
-  padding: 1em; 
-  text-align: center; 
-  width: 54%;
-}
-
 main img {
-  border-radius: 1em;
-  height : 70%; 
-  width: 80%;
+  border-radius: 1em;/*borobildutako ertzak*/
+  height: 70%; /*zenbat okupatuko duen altueraz*/
+  width: 80%;/*zenbat okupatuko duen zabaleraz*/
 }
-
-.content_wrapper article:nth-of-type(1) {
-  height: 400px;
+.content_wrapper article:nth-of-type(1) {/*artikulo klaseko lehen elementua hartzen du*/
+  height: 400px;/*zenbat okupatuko duen altueraz*/
+}
+nav{
+  width: 5%;
+}
+nav div{
+  margin-bottom: 10px;
 }
 article{
-  border: 1px solid #aaaaaa;
-  border-radius: 1em; 
-  height: 380px; 
-  padding: 1em; 
-  text-align: center; 
-  width: 32%;
+  height:300px ;
+  width: 30%;
+  text-align: center;
+  align-content: center;
+  border: solid black 1px;
+  padding: 5px;
+  border-radius: 5px;
 }
 article img{
-  border-radius: 1em;
-  height: 70%; 
-  width: 80%;
+  border-radius: 1em;/*borobildutako ertzak*/
+  height: 50%; /*zenbat okupatuko duen altueraz*/
+  width: 80%;/*zenbat okupatuko duen zabaleraz*/
 }
 .articles{
-  display: flex;
-  justify-content: space-between;
+display: flex;
+flex-direction: row;
+justify-content: space-between; /*horizontalki nola banatuko den adieraziko du. bai alboetan zein beraien artean espazioa emango du*/
+  margin-left: 10%;
+  margin-bottom: 10px;
 }
+
 footer{
+  border-top: solid 2px black;
+  margin-top: 10px;
   display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
   align-items: center;
-}
-footer img{
-  
-  width: 20%;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
