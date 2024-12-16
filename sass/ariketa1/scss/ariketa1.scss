@@ -1,0 +1,34 @@
+
+//v variables
+
+$bacground-magenta: rgb(175, 3, 175);
+$text-color: black;
+$text-active:white;
+
+
+@mixin display($c-direction:column){
+    display: flex;
+    flex-direction: $c-direction;
+}
+.container{
+    @include display();
+    nav{
+        @include display($c-direction:row);
+        margin: 5px 10px;
+        background-color: $bacground-magenta;
+        height: 50px;
+        align-items: center;
+    }
+       
+    
+    nav ul {
+        
+        @include display($c-direction:row);
+       
+        list-style-type: none;
+        gap: 50px;
+     
+    }
+   
+    
+}
