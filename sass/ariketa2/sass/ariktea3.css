@@ -1,0 +1,155 @@
+.btn-error {
+  background-color: red;
+  border: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn-error:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.btn-error:active {
+  background-color: orange;
+  color: white;
+}
+
+.btn-warning {
+  background-color: yellow;
+  border: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn-warning:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.btn-warning:active {
+  background-color: orange;
+  color: white;
+}
+
+.btn-accepted {
+  background-color: green;
+  border: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn-accepted:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.btn-accepted:active {
+  background-color: orange;
+  color: white;
+}
+
+.btn-normal {
+  background-color: blue;
+  border: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn-normal:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.btn-normal:active {
+  background-color: orange;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+table th, table td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+table tr:nth-child(1) td:nth-child(1) {
+  background-color: darkgrey;
+}
+table tr:nth-child(1) td:nth-child(2) {
+  background-color: lightgrey;
+}
+table tr:nth-child(1) td:nth-child(3) {
+  background-color: darkgrey;
+}
+table tr:nth-child(1) td:nth-child(4) {
+  background-color: lightgrey;
+}
+table tr:nth-child(2) td:nth-child(1) {
+  background-color: darkgrey;
+}
+table tr:nth-child(2) td:nth-child(2) {
+  background-color: lightgrey;
+}
+table tr:nth-child(2) td:nth-child(3) {
+  background-color: darkgrey;
+}
+table tr:nth-child(2) td:nth-child(4) {
+  background-color: lightgrey;
+}
+table tr:nth-child(3) td:nth-child(1) {
+  background-color: darkgrey;
+}
+table tr:nth-child(3) td:nth-child(2) {
+  background-color: lightgrey;
+}
+table tr:nth-child(3) td:nth-child(3) {
+  background-color: darkgrey;
+}
+table tr:nth-child(3) td:nth-child(4) {
+  background-color: lightgrey;
+}
+table tr:nth-child(4) td:nth-child(1) {
+  background-color: darkgrey;
+}
+table tr:nth-child(4) td:nth-child(2) {
+  background-color: lightgrey;
+}
+table tr:nth-child(4) td:nth-child(3) {
+  background-color: darkgrey;
+}
+table tr:nth-child(4) td:nth-child(4) {
+  background-color: lightgrey;
+}
+table tr:nth-child(5) td:nth-child(1) {
+  background-color: darkgrey;
+}
+table tr:nth-child(5) td:nth-child(2) {
+  background-color: lightgrey;
+}
+table tr:nth-child(5) td:nth-child(3) {
+  background-color: darkgrey;
+}
+table tr:nth-child(5) td:nth-child(4) {
+  background-color: lightgrey;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+.row .zut-2 {
+  width: 20%;
+  padding: 50px;
+  border: solid 1px black;
+}
+.row .zut-4 {
+  width: 50%;
+  padding: 50px;
+  border: solid 1px black;
+}
+.row .zut-1 {
+  width: 15%;
+  padding: 50px;
+  border: solid 1px black;
+}
+
+/*# sourceMappingURL=ariktea3.css.map */

@@ -1,34 +1,82 @@
-
-//v variables
-
-$bacground-magenta: rgb(175, 3, 175);
-$text-color: black;
-$text-active:white;
+// Kolore paleta orokorra
+//Colores generales
+$color-background: #FFFFFF;
+$color-base: #333333;
 
 
-@mixin display($c-direction:column){
-    display: flex;
-    flex-direction: $c-direction;
+//Menuarentzat koloreak
+$navbar-background-color: rgb(155, 111, 145);
+$navbar-color-hover: $color-background;
+
+//Bordearena kolorea
+$border-color: $color-base;
+
+/*Orriaren kontenedore orokorararen estiloak*/
+$main-container-width: 80%;
+
+.container {
+    width: $main-container-width;
+    margin: 0 auto;
 }
-.container{
-    @include display();
-    nav{
-        @include display($c-direction:row);
-        margin: 5px 10px;
-        background-color: $bacground-magenta;
-        height: 50px;
-        align-items: center;
+
+
+//Bordeentzat estiloak
+$border-width: 0.1rem;
+$border-style: "solid";
+
+$border-radius-small: 0.2rem;
+$border-radius: 1rem;
+$boder-radius-big: 2rem;
+
+
+/*Menuaren estilo orriak sortzeko habiratzea(anidamiento) */
+nav {
+    background-color: $navbar-background-color;
+    padding: 0.2rem;
+
+    ul {
+        li {
+            display: inline-block;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            &.active {
+                color: $navbar-color-hover;
+                font-weight: bolder;
+            }
+
+            &:hover {
+                color: $navbar-color-hover;
+            }
+
+
+            a {
+                text-decoration: none;
+            }
+
+        }
     }
-       
+}
+
+/*habiratze egitura figurentzat (cards)*/
+$figure-width: 25%;
+
+figure.card {
+    border: $border-width #{$border-style} $border-color;
+    border-radius: $border-radius;
+    display: inline-block;
+    padding: 1rem;
     
-    nav ul {
-        
-        @include display($c-direction:row);
-       
-        list-style-type: none;
-        gap: 50px;
-     
-    }
-   
-    
+    width: $figure-width;
+     img {
+        border-radius: $boder-radius-big; 
+        width: 100%;
+     }
+
+     figcaption {
+         font-size: 0.8rem;
+         margin: 0.5rem;
+         text-align: center;
+     }
+
 }

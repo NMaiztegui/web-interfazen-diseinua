@@ -1,0 +1,94 @@
+$btn-colors:(
+    error:red,
+    warning:yellow,
+    accepted:green,
+    normal:blue
+);
+@mixin active($btn-active-color, $btn-text){
+    background-color: $btn-active-color;
+    color: $btn-text;
+}
+$active-color: orange;
+
+@each $type, $color in $btn-colors {
+    .btn-#{$type} {
+        background-color: $color;
+        border: none ;
+        display: inline-block;
+        padding: 10px;
+         border-radius: 5px;
+         text-align: center;
+     
+        &:hover{
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+        }  
+        
+        &:active{
+           @include active($btn-active-color:orange, $btn-text:white);
+        }
+    }
+        
+}
+// tabla border
+$tb-border: 1px solid black;
+
+// zutabeen coloreak
+$bakoiti-color: darkgrey;
+$bikiti-color: lightgrey;
+
+@function zutabe-color($b){
+    @if $b % 2 == 0{
+        @return $bikiti-color;
+    }@else{
+        @return $bakoiti-color;
+    }
+}
+
+table{
+    border-collapse: collapse; 
+    width: 60%; 
+
+    th,td{
+        border: $tb-border;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    @for $i from 1 through 5 {
+        tr:nth-child(#{$i}){
+            @for $a from 1 through 4{
+                td:nth-child(#{$a}){
+                    background-color: zutabe-color($a)// si es bikoiti gris claro si no gris oscuro
+                }
+            }
+       
+        }
+  
+    }
+
+}
+
+$zut:(
+    2:20%,
+    4:50%,
+    1:15%
+    
+);
+.row{
+    width: 100%;
+    display: flex;
+    
+   
+            @each $i, $value in $zut{
+                
+                    .zut-#{$i}{
+                        width: $value;
+                        padding: 50px;
+                        border: solid 1px black;
+                    }
+                
+            }
+        
+}
+
+
