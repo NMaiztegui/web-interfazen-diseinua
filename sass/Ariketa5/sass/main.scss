@@ -1,0 +1,96 @@
+// header
+//color boder y de footer
+$foter-top-color:rgb(63, 63, 63);
+$f-color:grey;
+$decoration:none;
+$aurkezpena-fondo:url(../img/fondo.png);
+
+
+
+@mixin display-content($direction, $justify-content){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    width: 90%; 
+    margin: 0 auto; 
+    padding: 20px; 
+    
+}
+
+body{
+    border-top: $foter-top-color 40px solid;
+
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: $aurkezpena-fondo;
+}
+
+nav{
+    @include display-content(row, space-between);
+    position: fixed;
+    
+   
+
+    .logo{
+        height: 100px;
+        width: auto;
+    }
+    ul{
+        list-style: $decoration;
+        width: 50%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a{
+            color: $f-color;
+            text-decoration: $decoration;
+            font-size: 18px ;
+            font-weight: bold;
+        }
+        
+    }
+}
+
+.aurkezpena{
+    @include display-content(row, space-around);
+    
+    margin-top: 150px;
+    margin-bottom: 30px;
+    .flex-item1{
+      
+        width: 30%;
+        p{
+            color: $f-color;
+            text-align: left;
+        }
+    }
+    .flex-item2{
+        img{
+            border-radius: ;
+        }
+    }
+
+   
+}
+
+
+//botones de aurkezpena
+$btn-colors:(
+    principal:rgb(0, 162, 255),
+    secundario:grey,
+);
+
+$border-rounded: 10px;
+
+@each $type, $color in $btn-colors{
+    .btn-#{$type}{
+        background-color: $color;
+        color: white;
+        padding: 10px 20px;
+        border-radius: $border-rounded;
+        border: $decoration;
+       
+
+    }
+       
+} 
