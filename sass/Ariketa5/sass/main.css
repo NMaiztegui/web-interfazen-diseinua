@@ -1,17 +1,177 @@
-/* Error: Expected expression.
- *    ,
- * 69 |             border-radius: ;
- *    |                            ^
- *    '
- *   main.scss 69:28  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 69 \2502              border-radius: ;\d\a    \2502                             ^\a    \2575 \a   main.scss 69:28  root stylesheet";
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../img/fondo.png);
+  margin: 0;
+  width: 100%;
 }
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  border-top: rgb(63, 63, 63) 30px solid;
+  position: fixed;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  padding: 20px;
+}
+nav .logo {
+  height: 60px;
+  width: auto;
+}
+@media (max-width: 480px) {
+  nav .logo {
+    height: 40px;
+  }
+}
+nav ul {
+  list-style: none;
+  width: 50%;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li a {
+  color: grey;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: rgb(0, 162, 255);
+}
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 10px;
+  }
+}
+nav ul li:hover {
+  transform: scale(1.1);
+}
+
+.aurkezpena {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 30px;
+}
+.aurkezpena .flex-item1 {
+  margin: 10px;
+  width: 40%;
+}
+.aurkezpena .flex-item1 p {
+  color: grey;
+  text-align: left;
+}
+.aurkezpena .flex-item2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+  align-self: center;
+}
+.aurkezpena .flex-item2 img {
+  border-radius: 10px;
+  height: 300px;
+  width: auto;
+}
+@media (max-width: 480px) {
+  .aurkezpena .flex-item2 img {
+    height: 150px;
+  }
+}
+
+.btn-principal {
+  background-color: rgb(0, 162, 255);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 10px;
+  margin: 5px;
+}
+@media (max-width: 480px) {
+  .btn-principal {
+    font-size: 10px;
+  }
+}
+.btn-principal:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.btn-secundario {
+  background-color: grey;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 10px;
+  margin: 5px;
+}
+@media (max-width: 480px) {
+  .btn-secundario {
+    font-size: 10px;
+  }
+}
+.btn-secundario:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.azalpena {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.azalpena .zerbitzuak {
+  text-align: center;
+  width: 80%;
+}
+.azalpena .zerbitzuak p {
+  color: grey;
+}
+.azalpena .zerbitzuak .zerbitzu-mota {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 60px;
+}
+.azalpena .zerbitzuak .zerbitzu-mota i {
+  color: rgb(0, 162, 255);
+  font-size: 2rem;
+}
+
+footer {
+  background-color: rgb(63, 63, 63);
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer img {
+  height: 60px;
+  width: auto;
+}
+footer p {
+  display: flex;
+  color: grey;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=main.css.map */
