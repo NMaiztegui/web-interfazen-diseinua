@@ -1,72 +1,127 @@
-// header
+
 //color boder y de footer
-$foter-top-color:rgb(63, 63, 63);
-$f-color:grey;
-$decoration:none;
-$aurkezpena-fondo:url(../img/fondo.png);
+$footer-border-color:rgb(63, 63, 63);
+//font color
+$font-color:grey;
+$no-decoration:none;
+//fondo aurkezpena
+$background-image-url:url(../img/fondo.png);
+// radio de elementos
+$border-radius: 10px;
+// scalar en hover
+$hover-scale:scale(1.1);
+//light blue
+$light-blue:rgb(0, 162, 255);
 
 
-
-@mixin display-content($direction, $justify-content){
+@mixin display-content($direction, $justify-content,$with){
     display: flex;
     flex-direction: $direction;
     justify-content: $justify-content;
-    width: 90%; 
-    margin: 0 auto; 
-    padding: 20px; 
+    width: $with; 
+   
+   
+    
     
 }
 
+
 body{
-    border-top: $foter-top-color 40px solid;
+    
 
     font-family:Arial, Helvetica, sans-serif;
-    background-image: $aurkezpena-fondo;
+    background-image: $background-image-url;
+    margin: 0;
+    width: 100%;
 }
-
-nav{
-    @include display-content(row, space-between);
+#menu{
+    @include display-content(row, center, 100%);
+    border-top: $footer-border-color 30px solid;
     position: fixed;
+    top:0;
+}
+nav{
+    @include display-content(row, space-between, 90%);
+    padding: 20px;
+    
     
    
 
     .logo{
-        height: 100px;
+        height: 60px;
         width: auto;
+        @media(max-width: 480px){
+            height: 40px;
+           
+
+        }
+
     }
     ul{
-        list-style: $decoration;
+        list-style: $no-decoration;
         width: 50%;
         display:flex;
+        padding: 0;
         align-items: center;
         justify-content: space-between;
 
-        a{
-            color: $f-color;
-            text-decoration: $decoration;
-            font-size: 18px ;
-            font-weight: bold;
+        li{
+            a{
+                color: $font-color;
+                text-decoration: $no-decoration;
+                font-size: 15px ;
+                font-weight: bold;
+            
+                &:hover{
+                    color:$light-blue;
+                   
+                }
+                @media(max-width: 480px){
+                    font-size: 10px;
+                   
+        
+                }
+            }
+            &:hover{
+                
+                transform: $hover-scale;
+            }
         }
+
         
     }
 }
 
 .aurkezpena{
-    @include display-content(row, space-around);
+    @include display-content(row, center, 100%);
     
     margin-top: 150px;
     margin-bottom: 30px;
     .flex-item1{
-      
-        width: 30%;
+      margin: 10px;
+        width: 40%;
         p{
-            color: $f-color;
+            color: $font-color;
             text-align: left;
         }
     }
     .flex-item2{
+        @include display-content(row, center, auto);
+        align-self: center;
         img{
-            border-radius: ;
+            border-radius: $border-radius;
+            height: 300px;
+            width: auto;
+           
+
+           
+            
+            @media(max-width: 480px){
+                height: 150px;
+               
+
+            }
+            
         }
     }
 
@@ -76,21 +131,83 @@ nav{
 
 //botones de aurkezpena
 $btn-colors:(
-    principal:rgb(0, 162, 255),
+    principal:$light-blue,
     secundario:grey,
 );
 
-$border-rounded: 10px;
+
 
 @each $type, $color in $btn-colors{
     .btn-#{$type}{
         background-color: $color;
         color: white;
         padding: 10px 20px;
-        border-radius: $border-rounded;
-        border: $decoration;
-       
+        border-radius: $border-radius;
+        border: $no-decoration;
+        margin-right: 10px;
+        margin: 5px;
+
+        @media(max-width: 480px){
+            font-size: 10px;
+           
+
+        }
+    &:hover{
+        transform:$hover-scale;
+        cursor: pointer;
+    }
+    }   
+} 
+
+.azalpena{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: white;
+    @include display-content(row, center, 100%);
+    .zerbitzuak{
+        
+        text-align: center;
+        width: 80%;
+    
+        p{
+            color: $font-color;
+            
+            
+        }
+        .zerbitzu-mota{
+           
+            @include display-content(row, space-around, 100%);
+            margin-top: 60px;
+
+            i{
+                color: $light-blue ;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    
+        
+   
+}
+footer{
+    background-color: $footer-border-color;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img{
+        height: 60px;
+        width: auto;
 
     }
+    p{
+        display: flex;
+        color: $font-color;
        
-} 
+        justify-content: center; 
+   
+    }
+
+    
+}
