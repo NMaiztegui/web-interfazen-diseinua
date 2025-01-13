@@ -1,0 +1,81 @@
+//colors
+// main color(heder, button, footer)
+$main-color: rgb(41, 65, 197);
+$btn-text-color:yellow;
+
+$center:center;
+
+*{
+    box-sizing: border-box;
+}
+
+//display flex
+@mixin display-flex($j-content, $f-direction){
+    display:flex;
+    justify-content: $j-content;
+    flex-direction: $f-direction;
+}
+
+//transform 
+@mixin transform-scale($scale){
+    transform: scale($scale);
+}
+@mixin border-radius($border){
+    border-radius:$border;
+}
+@mixin imgs-size($witdh, $height){
+    width: $witdh;
+    height: $height;
+}
+
+//aling-items:center;
+
+header{
+    background-color: $main-color;
+
+    nav{
+        @include display-flex($center, row);
+
+        ul{
+            list-style:none;
+            padding:0;
+            margin: 0;
+            @include display-flex(space-between, row);
+            width: 50%;
+            li{
+                a{
+                    text-decoration:none;
+                    color:$btn-text-color;
+                    font-size:30px;
+                    font-weight: bold;
+                }&:hover{
+                    @include transform-scale(1.1);
+                   
+                }
+            }
+           
+        }
+    }
+}
+
+.edukia{
+    @include display-flex($center, column);
+    align-items: center;
+    
+    .elementu{
+        @include display-flex($center, row);
+
+        .card{
+            @include display-flex($center, column);
+            align-items: $center;
+            img{
+                @include border-radius(10px);
+                @include imgs-size(90%,90%);
+                margin-bottom: 10px;
+                
+            }
+            
+        }
+    }
+}
+
