@@ -1,0 +1,190 @@
+//colors
+$light-blue:rgb(0, 162, 255);
+$font-color:grey;
+$footer-border-color:rgb(63, 63, 63);
+$background-image-url:url(../img/fondo.png);
+//botones de aurkezpena
+$btn-colors:(
+    principal:$light-blue,
+    secundario:grey,
+);
+
+$center:center;
+$no-decoration:none;
+$transfrom-scale:scale(1.1);
+$border-radius: 10px;
+
+
+*{
+    box-sizing: border-box;
+}
+
+//display flex
+@mixin display-flex($j-content, $f-direction){
+    display:flex;
+    justify-content: $j-content;
+    flex-direction: $f-direction;
+}
+
+body{
+    
+
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: $background-image-url;
+    margin:0;
+    
+   
+}
+
+#menu{
+    @include display-flex($center,row);
+    border-top: $footer-border-color 30px solid;
+    position: fixed;
+    top:0;
+    width: 100%;
+
+    nav{
+        @include display-flex(space-between,row);
+        width: 90%;
+
+        .logo{
+            height: 60px;
+        }
+        ul{
+            @include display-flex(space-between,row);
+            width: 70%;
+            list-style:$no-decoration;
+
+            li{
+                a{
+                    color: $font-color;
+                    text-decoration: $no-decoration;
+                    font-size: 15px ;
+                    font-weight: bold;
+                }&:hover{
+                
+                    transform: $transfrom-scale;
+                }
+            }
+
+        }
+    }
+}
+
+.aurkezpena{
+    @include display-flex(space-between,row);
+    margin:100px;
+    margin-top: 150px;
+    @media(max-width: 480px){
+      
+        margin:10px;
+
+    }
+
+    .flex-item1{
+        @include display-flex($center,column);
+        width: 40%;
+        p{
+            color: $font-color;
+            text-align: left;
+        }
+       
+       
+    }
+    .flex-item2{
+        @include display-flex($center,row);
+        align-self: center;
+        img{
+            border-radius: $border-radius;
+            height: 300px;
+            width: auto;
+           
+
+           
+            
+            @media(max-width: 480px){
+                height: 150px;
+               
+
+            }
+            
+        }
+    }
+
+   
+  
+    @each $type, $color in $btn-colors{
+        .btn-#{$type}{
+            background-color: $color;
+            color: white;
+            padding: 10px 20px;
+            border-radius: $border-radius;
+            border: $no-decoration;
+            margin-right: 10px;
+            margin: 5px;
+    
+            @media(max-width: 480px){
+                font-size: 10px;
+               
+    
+            }
+        &:hover{
+            transform:$transfrom-scale;
+            cursor: pointer;
+        }
+        }   
+    } 
+
+}
+.azalpena{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: white;
+    @include display-flex($center,row);
+    .zerbitzuak{
+        
+        text-align: center;
+        width: 80%;
+    
+        p{
+            color: $font-color;
+            
+            
+        }
+        .zerbitzu-mota{
+           
+            @include display-flex(space-around,row);
+            margin-top: 60px;
+
+            i{
+                color: $light-blue ;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    
+        
+   
+}
+footer{
+    background-color: $footer-border-color;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img{
+        height: 60px;
+        width: auto;
+
+    }
+    p{
+        display: flex;
+        color: $font-color;
+       
+        justify-content: center; 
+   
+    }
+
+    
+}

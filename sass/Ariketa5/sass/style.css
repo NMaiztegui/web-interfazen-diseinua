@@ -10,66 +10,55 @@ body {
 
 #menu {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  width: 100%;
+  flex-direction: row;
   border-top: rgb(63, 63, 63) 30px solid;
   position: fixed;
   top: 0;
+  width: 100%;
 }
-
-nav {
+#menu nav {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  justify-content: space-between;
   width: 90%;
-  padding: 20px;
 }
-nav .logo {
+#menu nav .logo {
   height: 60px;
-  width: auto;
 }
-@media (max-width: 480px) {
-  nav .logo {
-    height: 40px;
-  }
-}
-nav ul {
-  list-style: none;
-  width: 50%;
+#menu nav ul {
   display: flex;
-  padding: 0;
-  align-items: center;
   justify-content: space-between;
+  flex-direction: row;
+  width: 70%;
+  list-style: none;
 }
-nav ul li a {
+#menu nav ul li a {
   color: grey;
   text-decoration: none;
   font-size: 15px;
   font-weight: bold;
 }
-nav ul li a:hover {
-  color: rgb(0, 162, 255);
-}
-@media (max-width: 480px) {
-  nav ul li a {
-    font-size: 10px;
-  }
-}
-nav ul li:hover {
+#menu nav ul li:hover {
   transform: scale(1.1);
 }
 
 .aurkezpena {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  justify-content: center;
-  width: 100%;
+  margin: 100px;
   margin-top: 150px;
-  margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  .aurkezpena {
+    margin: 10px;
+  }
 }
 .aurkezpena .flex-item1 {
-  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 40%;
 }
 .aurkezpena .flex-item1 p {
@@ -78,9 +67,8 @@ nav ul li:hover {
 }
 .aurkezpena .flex-item2 {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  width: auto;
+  flex-direction: row;
   align-self: center;
 }
 .aurkezpena .flex-item2 img {
@@ -93,8 +81,7 @@ nav ul li:hover {
     height: 150px;
   }
 }
-
-.btn-principal {
+.aurkezpena .btn-principal {
   background-color: rgb(0, 162, 255);
   color: white;
   padding: 10px 20px;
@@ -104,16 +91,15 @@ nav ul li:hover {
   margin: 5px;
 }
 @media (max-width: 480px) {
-  .btn-principal {
+  .aurkezpena .btn-principal {
     font-size: 10px;
   }
 }
-.btn-principal:hover {
+.aurkezpena .btn-principal:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-
-.btn-secundario {
+.aurkezpena .btn-secundario {
   background-color: grey;
   color: white;
   padding: 10px 20px;
@@ -123,11 +109,11 @@ nav ul li:hover {
   margin: 5px;
 }
 @media (max-width: 480px) {
-  .btn-secundario {
+  .aurkezpena .btn-secundario {
     font-size: 10px;
   }
 }
-.btn-secundario:hover {
+.aurkezpena .btn-secundario:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -137,9 +123,8 @@ nav ul li:hover {
   padding-bottom: 100px;
   background-color: white;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  width: 100%;
+  flex-direction: row;
 }
 .azalpena .zerbitzuak {
   text-align: center;
@@ -150,9 +135,8 @@ nav ul li:hover {
 }
 .azalpena .zerbitzuak .zerbitzu-mota {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  width: 100%;
+  flex-direction: row;
   margin-top: 60px;
 }
 .azalpena .zerbitzuak .zerbitzu-mota i {
@@ -177,4 +161,4 @@ footer p {
   justify-content: center;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */

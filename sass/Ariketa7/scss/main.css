@@ -4,6 +4,7 @@
 
 header {
   background-color: rgb(41, 65, 197);
+  height: fit-content;
 }
 header nav {
   display: flex;
@@ -17,13 +18,27 @@ header nav ul {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: 50%;
+  width: 90%;
+}
+@media (max-width: 650px) {
+  header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 header nav ul li a {
   text-decoration: none;
   color: yellow;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
+}
+@media (max-width: 650px) {
+  header nav ul li a {
+    font-size: 20px;
+  }
 }
 header nav ul li:hover {
   transform: scale(1.1);
@@ -40,6 +55,13 @@ header nav ul li:hover {
   justify-content: center;
   flex-direction: row;
 }
+@media (max-width: 650px) {
+  .edukia .elementu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 .edukia .elementu .card {
   display: flex;
   justify-content: center;
@@ -52,6 +74,16 @@ header nav ul li:hover {
   height: 90%;
   margin-bottom: 10px;
 }
+@media (max-width: 1000px) {
+  .edukia .elementu .card img {
+    width: 60%;
+    height: 60%;
+  }
+}
+.edukia .elementu .card p {
+  width: 80%;
+  text-align: center;
+}
 .edukia .botoi .btn-principal {
   background-color: rgb(41, 65, 197);
   color: yellow;
@@ -60,8 +92,30 @@ header nav ul li:hover {
   border-radius: 5px;
   border: none;
 }
+@media (max-width: 1000px) {
+  .edukia .botoi .btn-principal {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
 .edukia .botoi:hover {
   transform: scale(1.1);
+}
+
+footer {
+  background-color: rgb(41, 65, 197);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+@media (max-width: 1000px) {
+  footer {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
