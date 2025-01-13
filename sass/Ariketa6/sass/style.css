@@ -1,0 +1,90 @@
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  background-image: url("../img/img.jpg");
+  background-size: cover;
+  height: 16rem;
+}
+.container header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.container nav {
+  width: 10%;
+}
+.container nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+a {
+  color: white;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.showcase .showcase-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.showcase .showcase-search input {
+  height: 20px;
+}
+.showcase .showcase-search .btn {
+  background-color: rgb(255, 196, 0);
+  border: none;
+  padding: 5px;
+  color: white;
+}
+.showcase p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+}
+
+.azalpena {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.azalpena .irudia {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.azalpena .azalpen-edukia {
+  width: 97%;
+  margin-bottom: 4rem;
+}
+
+.mainfooter {
+  color: white;
+  background-color: rgb(123, 195, 213);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

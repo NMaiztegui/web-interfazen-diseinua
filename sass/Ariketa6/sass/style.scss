@@ -1,0 +1,100 @@
+
+$header-color:white;
+$center:center;
+
+@mixin display-flex($f-direction, $j-content) {
+    display: flex;
+    flex-direction: $f-direction;
+    justify-content: $j-content;
+}
+
+body{
+   
+    width: 100%;
+    margin:0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    
+}
+
+.container{
+    background-image: url("../img/img.jpg");
+    background-size: cover;
+    height: 16rem;
+  
+    
+    header{
+        @include display-flex(column, $center);
+        align-items: $center;
+        color:$header-color;
+    }
+
+    nav{
+        width: 10%;
+        ul{
+            list-style:none;
+            @include display-flex(row, space-between);
+            padding: 0;
+            
+            
+        }
+    }
+}
+
+a{
+    color:$header-color;
+}
+
+.showcase{
+    @include display-flex(column, $center);
+        align-items: $center;
+    .showcase-search{
+        @include display-flex(row, $center);
+        align-items: $center;
+
+        input{
+            height: 20px;
+        }
+       
+        .btn{
+            background-color: rgb(255, 196, 0);
+            border: none;
+            padding: 5px;
+            
+            color:$header-color
+        }
+    
+      
+    }
+    p{  
+        @include display-flex(column,$center);
+        align-items: $center;
+        text-align: $center;
+        width: 60%;
+    }
+    
+}
+
+.azalpena{
+    @include display-flex(column, center); 
+    align-items: $center;
+
+    .irudia{
+        margin-top:10px;
+        margin-bottom:30px;
+    }
+
+    .azalpen-edukia{
+        width: 97%;
+        margin-bottom: 4rem;
+    }
+
+}
+.mainfooter{
+    color: $header-color;
+    background-color: rgb(123, 195, 213);
+    @include display-flex(column,$center);
+        align-items: $center;
+        text-align: $center;
+       
+}
