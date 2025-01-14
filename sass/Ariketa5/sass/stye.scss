@@ -33,6 +33,7 @@ body{
     background-image: $background-image-url;
     margin:0;
     
+    
    
 }
 
@@ -53,6 +54,7 @@ body{
         ul{
             @include display-flex(space-between,row);
             width: 70%;
+            padding:0;
             list-style:$no-decoration;
 
             li{
@@ -72,18 +74,14 @@ body{
 }
 
 .aurkezpena{
-    @include display-flex(space-between,row);
-    margin:100px;
+    @include display-flex(center,row);
+    
     margin-top: 150px;
-    @media(max-width: 480px){
-      
-        margin:10px;
-
-    }
-
+   
     .flex-item1{
         @include display-flex($center,column);
         width: 40%;
+        margin-right: 20px;
         p{
             color: $font-color;
             text-align: left;
@@ -94,15 +92,16 @@ body{
     .flex-item2{
         @include display-flex($center,row);
         align-self: center;
+        
         img{
             border-radius: $border-radius;
-            height: 300px;
+            height: 200px;
             width: auto;
            
 
            
             
-            @media(max-width: 480px){
+            @media(max-width: 600px){
                 height: 150px;
                
 
@@ -112,7 +111,13 @@ body{
     }
 
    
-  
+  div{
+    @media(max-width: 600px){
+        @include display-flex(left,column);
+       
+        
+    }
+ 
     @each $type, $color in $btn-colors{
         .btn-#{$type}{
             background-color: $color;
@@ -123,10 +128,10 @@ body{
             margin-right: 10px;
             margin: 5px;
     
-            @media(max-width: 480px){
+            @media(max-width: 600px){
+                width: 50%;
                 font-size: 10px;
-               
-    
+                
             }
         &:hover{
             transform:$transfrom-scale;
@@ -134,6 +139,9 @@ body{
         }
         }   
     } 
+
+  }
+    
 
 }
 .azalpena{

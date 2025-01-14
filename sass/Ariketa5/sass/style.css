@@ -31,6 +31,7 @@ body {
   justify-content: space-between;
   flex-direction: row;
   width: 70%;
+  padding: 0;
   list-style: none;
 }
 #menu nav ul li a {
@@ -45,21 +46,16 @@ body {
 
 .aurkezpena {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
-  margin: 100px;
   margin-top: 150px;
-}
-@media (max-width: 480px) {
-  .aurkezpena {
-    margin: 10px;
-  }
 }
 .aurkezpena .flex-item1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 40%;
+  margin-right: 20px;
 }
 .aurkezpena .flex-item1 p {
   color: grey;
@@ -73,15 +69,22 @@ body {
 }
 .aurkezpena .flex-item2 img {
   border-radius: 10px;
-  height: 300px;
+  height: 200px;
   width: auto;
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .aurkezpena .flex-item2 img {
     height: 150px;
   }
 }
-.aurkezpena .btn-principal {
+@media (max-width: 600px) {
+  .aurkezpena div {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+  }
+}
+.aurkezpena div .btn-principal {
   background-color: rgb(0, 162, 255);
   color: white;
   padding: 10px 20px;
@@ -90,16 +93,17 @@ body {
   margin-right: 10px;
   margin: 5px;
 }
-@media (max-width: 480px) {
-  .aurkezpena .btn-principal {
+@media (max-width: 600px) {
+  .aurkezpena div .btn-principal {
+    width: 50%;
     font-size: 10px;
   }
 }
-.aurkezpena .btn-principal:hover {
+.aurkezpena div .btn-principal:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-.aurkezpena .btn-secundario {
+.aurkezpena div .btn-secundario {
   background-color: grey;
   color: white;
   padding: 10px 20px;
@@ -108,12 +112,13 @@ body {
   margin-right: 10px;
   margin: 5px;
 }
-@media (max-width: 480px) {
-  .aurkezpena .btn-secundario {
+@media (max-width: 600px) {
+  .aurkezpena div .btn-secundario {
+    width: 50%;
     font-size: 10px;
   }
 }
-.aurkezpena .btn-secundario:hover {
+.aurkezpena div .btn-secundario:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
